@@ -1,108 +1,66 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+ body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-#video-fondo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
 
-.container {
-  width: 80vw;
-  height: 80vh;
-  background-color: black;
-  color: white;
-  padding: 2rem;
-  border-radius: 20px;
-  box-sizing: border-box;
-  z-index: 1;
-  position: relative;
-intro-Javi
-  display: flex;
-  justify-content: center; 
-  align-items: center;  
-  text-align: center;
-  overflow: hidden;
-  
-   margin-top: 30px;
+
+.container{
+  margin-top: 30px;
   background-color: black;
   height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: end;
   
-border-radius: 180px 0 180px 0px;
-}
-
-#intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  align-items: center;        
-  padding-top: 2rem;         
-  height: 100%;
-}
-
-.alien-btn {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.alien-btn:hover {
-  transform: scale(1.2);
-}
-
-.fade {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.fade.show {
-  opacity: 1;
-
-  display: flex;              
-  justify-content: center;    
-  align-items: center;        
-  overflow: hidden;
- master
-}
-
-
-.center_body img {
-  max-width: 23%;   
-  height: auto;     
-  display: block;
-  margin-top: 150px;  
-}
-
-
+border-radius: 180px 0 180px 0px;}
  #title {
-      width: 300px;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  top:-30px;
+  left: 115px;
+      width: 180px;
+      height: 290px;
+      display: none; /* hidden at first */
+  border-radius: 10px;
       text-align: center;
       font-weight: bold;
+      position: absolute;
     }
+ #gorra {
+  top:-82px;
+  left: 114px;
+      width: 180px;
+      height: 290px;
+      display: none; /* hidden at first */
+  border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      position: absolute;
+      z-index:-100px
+    }
+
+ #gaffas {
+  top:-12px;
+  left: 114px;
+      width: 180px;
+      height: 290px;
+      display: none; /* hidden at first */
+  border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      position: absolute;
+      z-index:-100px
+    }
+
+.show {
+  display: block !important; /* show it when we add .show */
+}
