@@ -19,8 +19,8 @@ body, html {
 }
 
 .container {
-  width: 70vw;
-  height: 70vh;
+  width: 80vw;
+  height: 80vh;
   background-color: black;
   color: white;
   padding: 2rem;
@@ -28,6 +28,16 @@ body, html {
   box-sizing: border-box;
   z-index: 1;
   position: relative;
-  text-align: center;
-  overflow: auto;
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  overflow: hidden;
+}
+
+
+.center_body img {
+  max-width: 23%;   
+  height: auto;     
+  display: block;
+  margin-top: 150px;  
 }
