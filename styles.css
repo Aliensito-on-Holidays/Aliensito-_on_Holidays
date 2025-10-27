@@ -33,7 +33,16 @@ intro-Javi
   justify-content: center; 
   align-items: center;  
   text-align: center;
-  overflow: hidden; 
+  overflow: hidden;
+  
+   margin-top: 30px;
+  background-color: black;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  
+border-radius: 180px 0 180px 0px;
 }
 
 #intro {
@@ -86,3 +95,14 @@ intro-Javi
   display: block;
   margin-top: 150px;  
 }
+
+
+ #title {
+      width: 300px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+    }
