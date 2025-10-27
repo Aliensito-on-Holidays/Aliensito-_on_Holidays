@@ -28,10 +28,55 @@ body, html {
   box-sizing: border-box;
   z-index: 1;
   position: relative;
+intro-Javi
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  text-align: center;
+  overflow: hidden; 
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;        
+  padding-top: 2rem;         
+  height: 100%;
+}
+
+.alien-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.alien-btn:hover {
+  transform: scale(1.2);
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade.show {
+  opacity: 1;
+
   display: flex;              
   justify-content: center;    
   align-items: center;        
   overflow: hidden;
+ master
 }
 
 
