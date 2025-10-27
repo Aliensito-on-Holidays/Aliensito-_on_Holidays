@@ -26,102 +26,48 @@ const setNombre = () => {
     }, 500); 
 };
 
-const listImage = ['./imagenes/Casco espacial.png']; // adjust path
-const listImage1 = ['./imagenes/Gafitas Sol.png']; // adjust path
-const listImage2 = ['./imagenes/Gorrito invierno.png']; // adjust path
+// Image lists
+const listImage = ['./imagenes/Casco espacial.png'];
+const listImage1 = ['./imagenes/Gafitas Sol.png'];
+const listImage2 = ['./imagenes/Gorrito invierno.png'];
 
 let currentImageIndex = 0;
-let isVisible = false; // track if image is visible
 
-const onHat = (list) => {
-  const title = document.getElementById('title');
-  const parent = title.parentElement;
-
-  // Set image source (only if hidden)
-  if (!isVisible) {
-    title.src = list[currentImageIndex];
-    title.style.display = 'block';
-  } else {
-    title.style.display = 'none';
-  }
-
-  // Toggle dark background for fun (optional)
-  parent.classList.toggle('bg-dark');
-
-  // Toggle visibility state
-  isVisible = !isVisible;
-
-  // Move to next image (if you have more)
-  currentImageIndex = (currentImageIndex + 1) % list.length;
-};
-
-
-const onHat1 = (list) => {
-  const title = document.getElementById('gaffas');
-  const parent = title.parentElement;
-
-  // Set image source (only if hidden)
-  if (!isVisible) {
-    title.src = list[currentImageIndex];
-    title.style.display = 'block';
-  } else {
-    title.style.display = 'none';
-  }
-
-  // Toggle dark background for fun (optional)
-  parent.classList.toggle('bg-dark');
-
-  // Toggle visibility state
-  isVisible = !isVisible;
-
-  // Move to next image (if you have more)
-  currentImageIndex = (currentImageIndex + 1) % list.length;
-};
-
-
-
-
-const onHat2 = (list) => {
-  const title = document.getElementById('gorra');
-  const parent = title.parentElement;
-
-  // Set image source (only if hidden)
-  if (!isVisible) {
-    title.src = list[currentImageIndex];
-    title.style.display = 'block';
-  } else {
-    title.style.display = 'none';
-  }
-
-  // Toggle dark background for fun (optional)
-  parent.classList.toggle('bg-dark');
-
-  // Toggle visibility state
-  isVisible = !isVisible;
-
-  // Move to next image (if you have more)
-  currentImageIndex = (currentImageIndex + 1) % list.length;
-};
-
-
-
-
-const onSend = () => {
-  onHat(listImage);
-
-};
-
-
-
-const onProd =()=>{
-    onHat1(listImage1);
-
+// Helper: hide all images
+function hideAll() {
+  document.getElementById('title').style.display = 'none';
+  document.getElementById('gaffas').style.display = 'none';
+  document.getElementById('gorra').style.display = 'none';
 }
 
+// Show/hide selected image only
+function toggleImage(imgId, list) {
+  const img = document.getElementById(imgId);
+  const isHidden = img.style.display === 'none' || img.style.display === '';
 
+  // Hide all others first
+  hideAll();
 
+  if (isHidden) {
+    img.src = list[currentImageIndex];
+    img.style.display = 'block';
+  } else {
+    img.style.display = 'none';
+  }
 
-const onConfirm =()=>{
-    onHat2(listImage2);
+  // Loop images if there are multiple
+  currentImageIndex = (currentImageIndex + 1) % list.length;
+}
 
+// Button handlers
+function onSend() {
+  toggleImage('title', listImage); // Show helmet
+}
+
+function onProd() {
+  toggleImage('gaffas', listImage1); // Show sunglasses
+}
+
+function onConfirm() {
+  toggleImage('gorra', listImage2); // Show winter hat
 }
