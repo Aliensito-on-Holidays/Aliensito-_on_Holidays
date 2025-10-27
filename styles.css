@@ -1,0 +1,35 @@
+ body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+
+.container{
+  margin-top: 30px;
+  background-color: black;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  
+border-radius: 180px 0 180px 0px;}
+ #title {
+      width: 300px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+    }
