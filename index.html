@@ -2,142 +2,152 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aliensito</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
   <video autoplay muted loop id="video-fondo">
-    <source src="videos/14662-258508765.mp4" type="video/mp4">
+    <source src="videos/14662-258508765.mp4" type="video/mp4" />
   </video>
 
-<div class="container">
-  <div class="row border border-primary  ">
+  <div id="playa" class="container text-center">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 ">
+        <p id="text" class="fs-1 mb-4 text-light">
+          ¡Hola terrícola! soy <span class="text-success fw-bold">Aliensito</span>, y vengo del planeta de
+          Raticulín.<br />
+          y tú, ¿cómo te llamas?
+        </p>
+      </div>
 
-    <div class="col-12 col-md-4 border border-primary ">
+      <div class="col-12   position-relative  ">
 
-
-    <div class="card text-center p-3">
-  <h1>Cara</h1>
-
-  <ul class="nav justify-content-center mb-3">
-    <li class="nav-item mx-1">
-      <button class="btn btn-danger" onclick="onSend()">Send</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-warning" onclick="onProd()">Product</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-success" onclick="onConfirm()">Confirm</button>
-    </li>
-  </ul>
-</div>
-
-
- <div class="card text-center p-3">
-  <h1>Cuerpo                                       </h1>
-
-  <ul class="nav justify-content-center mb-3">
-    <li class="nav-item mx-1">
-      <button class="btn btn-danger" onclick="onSend()">Send</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-warning" onclick="onProd()">Product</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-success" onclick="onConfirm()">Confirm</button>
-    </li>
-  </ul>
-</div>
-
- <div class="card text-center p-3">
-  <h1>Piernas</h1>
-
-  <ul class="nav justify-content-center mb-3">
-    <li class="nav-item mx-1">
-      <button class="btn btn-danger" onclick="onSend()">Send</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-warning" onclick="onProd()">Product</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-success" onclick="onConfirm()">Confirm</button>
-    </li>
-  </ul>
-</div>
-
-    </div>
-
-    <div style="position: relative;" class="col-12 col-md-4 border border-primary d-flex justify-content-center">
-      <div>
-        
-        <h1 class="bg-dark">
-  <img id="gaffas" src="" alt="">
-  
-</h1> 
-<h1 class="bg-dark">
-  <img id="title" src="" alt="">
-  
-</h1>  
-<h1 class="bg-dark">
-  <img id="gorra" src="" alt="">
-  
-</h1>      <img style="width: 280px;" src="imagenes/Aliensito_desnudo.png" alt="Aliensito desnudo">
+        <div class="row">
+          <div class="col-12">
+            <section id="intro" class="fade show d-flex justify-content-center">
+              <div class="d-flex justify-content-center align-items-center gap-2">
+                <input id="inputNombre" type="text" class="form-control text-center w-40" placeholder="Tu nombre"
+                  required />
+                <button class="alien-btn" onclick="setNombre()">👽</button>
+              </div>
+            </section>
+          </div>
+          <div class="col-12 d-flex flex-column align-items-center  justify-content-end">
+            <section id="main" class="fade d-none   ">
+              <img id="ufo" src="" alt="" style="width:200px; display:none; " />
+            </section>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="col-12 col-md-4 border border-primary">
-       <div class="card text-center p-3">
-  <h1>Accesorios                                            </h1>
+    <!-- Middle and Center Right columns -->
+    <div class="row  mt-3">
+      <!-- LEFT SIDE -->
+      <div class="col-12 col-md-4 ">
+        <div class="card text-center p-3">
+          <h1>Cara</h1>
+          <ul class="nav justify-content-center mb-3">
+            <li class="nav-item mx-1"><button class="btn btn-danger" onclick="onHelmet()"><img width="50px"
+                  src="./imagenes/alien.webp" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-warning" onclick="onSunglasses()"><img width="50px"
+                  src="./imagenes/gafas-icons.png" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-success" onclick="onHat()"><img width="33px"
+                  src="./imagenes/Gorrito invierno.png" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-success" onclick="resetHelmet()">Reset</button></li>
 
-  <ul class="nav justify-content-center mb-3">
-    <li class="nav-item mx-1">
-      <button class="btn btn-danger" onclick="onSend()">Send</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-warning" onclick="onProd()">Product</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-success" onclick="onConfirm()">Confirm</button>
-    </li>
-  </ul>
-</div>
 
- <div class="card text-center p-3">
-  <h1>Fondo</h1>
+          </ul>
+        </div>
+        <div class="card text-center p-3">
+          <h1>Cuerpo</h1>
+          <ul class="nav justify-content-center mb-3">
+            <li class="nav-item mx-1"><button class="btn btn-danger" onclick="onTShirt()"><img width="50px"
+                  src="./imagenes/t-shirt.png" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-warning" onclick="onShirt()"><img width="50px"
+                  src="./imagenes/shirt.png" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-success" onclick="onSweatShirt()"><img width="50px"
+                  src="./imagenes/tshirt2.png" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-success" onclick="resetBody()">Reset</button></li>
 
-  <ul class="nav justify-content-center mb-3">
-    <li class="nav-item mx-1">
-      <button class="btn btn-danger" onclick="onSend()">Send</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-warning" onclick="onProd()">Product</button>
-    </li>
-    <li class="nav-item mx-1">
-      <button class="btn btn-success" onclick="onConfirm()">Confirm</button>
-    </li>
-  </ul>
-</div>
 
+          </ul>
+
+        </div>
+        <div class="card text-center p-3">
+          <h1>Piernas</h1>
+          <ul class="nav justify-content-center mb-3">
+            <li class="nav-item mx-1"><button class="btn btn-danger" onclick="onPants()"><img width="50px"
+                  src="./imagenes/pants.png" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-warning" onclick="onDenimPants()"><img width="50px"
+                  src="./imagenes/denim pants.png" alt=""></button></li>
+            <li class="nav-item mx-1"><button class="btn btn-success" onclick="onOrangePants()"><img width="50px"
+                  src="./imagenes/pants orange.png" alt=""></button></li>
+            <li class="nav-item mx-1">
+              <button class="btn btn-dark" onclick="resetLeg()">Reset</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MIDDLE Aliensito  -->
+      <div class="col-12 col-md-4  d-flex justify-content-center p-3">
+        <div style="position: relative;">
+          <p class="card text-dark" style="position:absolute;top:-10px;left:210px ;width: 130px;" id="saludo"
+            class="text-light mt-1"></p>
+
+          <img id="gaffas" src="" alt="" />
+          <img id="title" src="" alt="" />
+          <img id="gorra" src="" alt="" />
+          <img id="tshirt" src="" alt="" />
+          <img id="shirt" src="" alt="" />
+          <img id="pants" src="" alt="" />
+          <img id="denim_pants" src="" alt="" />
+          <img id="orange_pants" src="" alt="" />
+          <img id="tshirt1" src="" alt="" />
+
+          <img style="width:280px;" src="imagenes/Aliensito_desnudo.png" alt="Aliensito desnudo" />
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-12 col-md-4 ">
+        <div class="card text-center p-3">
+          <h1>Accesorios</h1>
+          <ul class="nav justify-content-center mb-3">
+            <li class="nav-item mx-1"><button class="btn btn-danger" onclick="onSend()">Send</button></li>
+            <li class="nav-item mx-1"><button class="btn btn-warning" onclick="onProd()">Product</button></li>
+            <li class="nav-item mx-1"><button class="btn btn-success" onclick="onConfirm()">Confirm</button></li>
+          </ul>
+        </div>
+        <div class="card text-center p-3">
+          <h1>Fondo</h1>
+          <ul class="nav justify-content-center mb-3">
+            <li class="nav-item mx-1">
+              <button class="btn btn-danger" onclick="changeBackground('beach')"><img width="50px"
+                  src="./imagenes/fondo_playa.png" alt=""></button>
+            </li>
+            <li class="nav-item mx-1">
+              <button class="btn btn-warning" onclick="changeBackground('space')"><img width="50px"
+                  src="./imagenes/fondo_nave.png" alt=""></button>
+            </li>
+            <li class="nav-item mx-1">
+              <button class="btn btn-success" onclick="changeBackground('montana')"><img width="50px"
+                  src="./imagenes/fondo_montaña.png" alt=""></button>
+            </li>
+            <li class="nav-item mx-1">
+              <button class="btn btn-dark" onclick="changeBackground('reset')">Reset</button>
+            </li>
+          </ul>
+
+        </div>
+      </div>
     </div>
-
   </div>
-</div>
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-    crossorigin="anonymous"></script>
 
   <script src="./script.js"></script>
 </body>

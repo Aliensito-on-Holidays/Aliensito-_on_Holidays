@@ -1,66 +1,276 @@
- body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+ body,
+ html {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+ }
 
-    #video-fondo {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-    }
+ #video-fondo {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+   z-index: -1;
+ }
 
 
-.container{
-  margin-top: 30px;
-  background-color: black;
-  height: 750px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  
-border-radius: 180px 0 180px 0px;}
+ .container {
+   margin-top: 30px;
+   background-color: black;
+   height: 750px;
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+
+   border-radius: 180px 0 180px 0px;
+ }
+
  #title {
-  top:-30px;
-  left: 115px;
-      width: 180px;
-      height: 290px;
-      display: none; /* hidden at first */
-  border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-      position: absolute;
-    }
+   top: -30px;
+   left: 35px;
+   width: 180px;
+   height: 290px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+ }
+
  #gorra {
-  top:-82px;
-  left: 114px;
-      width: 180px;
-      height: 290px;
-      display: none; /* hidden at first */
-  border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-      position: absolute;
-      z-index:-100px
-    }
+   top: -79px;
+   left: 39px;
+   width: 180px;
+   height: 290px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
 
  #gaffas {
-  top:-12px;
-  left: 114px;
-      width: 180px;
-      height: 290px;
-      display: none; /* hidden at first */
-  border-radius: 10px;
-      text-align: center;
-      font-weight: bold;
-      position: absolute;
-      z-index:-100px
-    }
+   top: -25px;
+   left: 35px;
+   width: 180px;
+   height: 290px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
 
-.show {
-  display: block !important; /* show it when we add .show */
+
+
+ #tshirt {
+
+
+   top: 142px;
+   left: 27px;
+   width: 200px;
+   height: 178px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
+
+ #shirt {
+
+
+   top: 148px;
+   left: 21px;
+   width: 208px;
+   height: 178px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
+
+
+
+ #tshirt1 {
+   top: 152px;
+   left: 41px;
+   width: 175px;
+   height: 172px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
+
+ .show {
+   display: block !important;
+   /* show it when we add .show */
+ }
+
+
+ #playa {
+   transition: background 0.5s ease-in-out, background-image 0.5s ease-in-out;
+ }
+
+ #pants {
+
+   top: 246px;
+   left: 62px;
+   width: 125px;
+   height: 138px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
+
+ #denim_pants {
+   top: 242px;
+     left: 65px;
+   width: 122px;
+   height: 138px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
+
+ #orange_pants {
+   top: 246px;
+   left: 71px;
+   width: 110px;
+   height: 138px;
+   display: none;
+   border-radius: 10px;
+   text-align: center;
+   font-weight: bold;
+   position: absolute;
+   z-index: -100px
+ }
+
+
+
+ #intro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ #main {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   padding-top: 2rem;
+   height: 100%;
+ }
+
+ .alien-btn {
+   font-size: 2rem;
+   background: none;
+   border: none;
+   cursor: pointer;
+   transition: transform 0.3s;
+ }
+
+ .alien-btn:hover {
+   transform: scale(1.2);
+ }
+
+ .fade {
+   opacity: 0;
+   transition: opacity 0.5s ease;
+ }
+
+ .fade.show {
+   opacity: 1;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+ }
+
+
+
+ 
+.card {
+  background: rgba(20, 25, 35, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  color: #e0f7fa;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card h1 {
+  color: #7ef6a6; 
+  font-size: 1.6rem;
+  text-shadow: 0 0 10px rgba(126, 246, 166, 0.5);
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card ul li {
+  list-style: none;
+}
+
+.card .btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.card .btn img {
+  width: 45px;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+
+.card .btn:hover img {
+  transform: scale(1.2);
+}
+
+.col-12.col-md-4 .card + .card {
+  margin-top: 0.3rem;
 }
