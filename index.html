@@ -72,7 +72,7 @@
             <li class="nav-item mx-1"><button class="btn btn-success" onclick="onSweatShirt()"><img width="50px"
                   src="./imagenes/tshirt2.png" alt=""></button></li>
             <li class="nav-item mx-1"><button class="btn btn-success" onclick="resetBody()">Reset</button></li>
-
+            
 
           </ul>
 
@@ -110,6 +110,9 @@
           <img id="tshirt1" src="" alt="" />
 
           <img style="width:280px;" src="imagenes/Aliensito_desnudo.png" alt="Aliensito desnudo" />
+          <img id="mochila" src="" alt="Mochila" class="accesorio" />
+         <img id="perrito" src="" alt="Perrito" class="accesorio" />
+         <img id="flotador" src="" alt="Flotador" class="accesorio" />
         </div>
       </div>
 
@@ -117,11 +120,33 @@
       <div class="col-12 col-md-4 ">
         <div class="card text-center p-3">
           <h1>Accesorios</h1>
-          <ul class="nav justify-content-center mb-3">
-            <li class="nav-item mx-1"><button class="btn btn-danger" onclick="onSend()">Send</button></li>
-            <li class="nav-item mx-1"><button class="btn btn-warning" onclick="onProd()">Product</button></li>
-            <li class="nav-item mx-1"><button class="btn btn-success" onclick="onConfirm()">Confirm</button></li>
-          </ul>
+    <ul class="nav justify-content-center mb-3">
+      <li class="nav-item mx-1">
+       <button class="btn btn-danger" onclick="onSend()">
+      <img width="50px" src="./imagenes/mochila_accesorio.png" alt="Enviar">
+    </button>
+    </li>
+
+  <li class="nav-item mx-1">
+    <button class="btn btn-warning" onclick="onProd()">
+      <img width="50px" src="./imagenes/perrito_accesorio.png" alt="Producto">
+    </button>
+  </li>
+
+ <li class="nav-item mx-1">
+  <button class="btn btn-success" onclick="onFlotador()">
+    <img width="50px" src="./imagenes/flotador_accesorio.png" alt="Flotador">
+  </button>
+</li>
+  <li class="nav-item mx-1">
+  <button class="btn btn-dark" onclick="resetAccesorios()">Reset</button>
+</li>
+
+</ul>
+
+
+
+
         </div>
         <div class="card text-center p-3">
           <h1>Fondo</h1>

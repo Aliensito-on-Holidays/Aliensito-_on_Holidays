@@ -181,3 +181,50 @@ const resetAliensito=()=>{
   const allIds = [...caraIds, ...cuerpoIds, ...piernasIds];
   hideCategoryImages(allIds);
 }
+
+
+
+
+
+// === Accesorios ===
+const accesoriosIds = ["mochila", "perrito", "flotador"];
+
+function showAccesorio(id, src) {
+  accesoriosIds.forEach(accId => {
+    const el = document.getElementById(accId);
+    if (!el) return;
+
+    if (accId === id) {
+      el.src = src;               
+      el.style.display = "block";
+      el.classList.add("show");   
+    } else {
+      el.classList.remove("show"); 
+      setTimeout(() => el.style.display = "none", 300); 
+    }
+  });
+}
+
+
+function onSend() {
+  showAccesorio("mochila", "./imagenes/mochila_accesorio.png");
+}
+
+function onProd() {
+  showAccesorio("perrito", "./imagenes/perrito_accesorio.png");
+}
+
+function onFlotador() {
+  showAccesorio("flotador", "./imagenes/flotador_accesorio.png");
+}
+
+
+function resetAccesorios() {
+  accesoriosIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.remove("show");
+      el.style.display = "none";
+    }
+  });
+}
