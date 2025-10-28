@@ -206,11 +206,11 @@ function showAccesorio(id, src) {
 }
 
 
-function onSend() {
+function onMochila() {
   showAccesorio("mochila", "./imagenes/mochila_accesorio.png");
 }
 
-function onProd() {
+function onPerro() {
   showAccesorio("perrito", "./imagenes/perrito_accesorio.png");
 }
 
