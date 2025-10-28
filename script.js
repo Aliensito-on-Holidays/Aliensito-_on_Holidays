@@ -91,12 +91,6 @@ const changeBackground=(option)=>{
 }
 
 
-
-
-
-
-
-
 const hideCategoryImages=(ids)=>{
   ids.forEach(id => {
     const img = document.getElementById(id);
