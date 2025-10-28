@@ -289,15 +289,18 @@
 
 
 #mochila {
-  left: 30px;
+  left: 10px;
+  width: 120px;
 }
 
 #perrito {
   left: 110px;
+  width: 120px;
 }
 
 #flotador {
   left: 190px;
+  width: 120px;
 }
 
 #silla {
